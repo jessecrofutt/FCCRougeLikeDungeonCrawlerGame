@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC')
+
+//reset css
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  font-weight: inherit
+  font-style: inherit
+  font-size: 100%
+  font-family: inherit
+  vertical-align: baseline
+
+/* remember to define focus styles! */
+//:focus
+//  outline: 0
+
+@font-face
+  font-family: 'IM Fell English SC'
+  font-style: normal
+  font-weight: 400
+  src: url('./fonts/im-fell-english-sc-v6-latin-regular.eot') /* IE9 Compat Modes */
+  src: url('./fonts/im-fell-english-sc-v6-latin-regular.eot?#iefix') format('embedded-opentype') /* IE6-IE8 */
+  src: url('./fonts/im-fell-english-sc-v6-latin-regular.woff2') format('woff2') /* Super Modern Browsers */
+  src: url('./fonts/im-fell-english-sc-v6-latin-regular.woff') format('woff') /* Modern Browsers */
+  //src: url('./fonts/im-fell-english-sc-v6-latin-regular.ttf') format('truetype') /* Safari, Android, iOS */
+  src: url('./fonts/im-fell-english-sc-v6-latin-regular.svg#OpenSans') format('svg') /* Legacy iOS */
+
+
+
+$IMFell: 'IM Fell English SC', Helvetica, Arial, serif
+
+body
+  font-family:  'IM Fell English SC', Helvetica, Arial, serif
+  line-height: 1
+  color: black
+  background: white
+  text-align: center
+
+ol, ul
+  list-style: none
+
+/* tables still need 'cellspacing="0"' in the markup */
+table
+  border-collapse: separate
+  border-spacing: 0
+
+caption, th, td
+  text-align: left
+  font-weight: normal
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content: ""
+
+blockquote, q
+  quotes: "" ""
+
+//@import "bootstrap";
+
+//@import '~/node_modules/bootstrap/dist/bootstrap.css'
+
+$backBlack: #000000
+$fullWidth: 100%
+$coolBlue: #00aeb3
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+a 
+  @extend .horCenter
+
+a:link 
+  @extend .vertCenter
+  color: $coolBlue
+  text-decoration: none
+
+a:hover 
+  color: #fff500
+
+a:visited 
+  color: #d77900
+
+a:active 
+  color: #ff0008
+
+body
+  font-family: "consolas", "", serif
+  color: $coolBlue
+  background-color: $backBlack
+  margin: 0
+
+h1
+  font-family:  $IMFell
+  color: #00f7fc
+  margin: 5px
+  font-size: 4vw
+
+h2
+  font-family:  $IMFell
+  color: #00f7fc
+  margin: 0px
+  font-size: 2vw
+
+h3
+  font-family:  $IMFell
+  color: #b3003c
+  margin: 0px
+  font-size: 2vw
+
+
+
+.btn-primary
+  color: #b3003c
+  background-image: linear-gradient($coolBlue ,#00f7fc)
+  background-color: $backBlack
+  border-color: #00a1a3
+  padding: 2px
+  margin: 2px
+  min-width: 20px
+  min-height: 28px
+
+.btn-primary:focus,
+.btn-primary.focus
+  @extend .btn-primary
+  color: black
+  background-color: #1d66fc
+  background-image: linear-gradient($coolBlue ,#00f7fc)
+
+.btn-primary:hover
+  @extend .btn-primary.focus
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover
+  @extend .btn-primary.focus
+
+.buttonArea
+  display: flex
+  justify-content: space-between
+  padding: 5px
+  width: 500px
+
+.buttonAreaTail
+  @extend .flexcontainer-row
+  justify-content: center
+
+
+.cell
+  width: 100%
+  height: 100%
+  background-color: black
+  background-size: contain
+
+  //border-style: ridge
+  //border-width: 1px
+  //border-color: #000e47
+  //+border-radius(5px)
+
+
+.gridArea
+  display: flex
+  justify-content: center
+  //margin: 10px
+  +border-radius(5px)
+
+.gridHolder
+  width: 100%
+  display: flex
+  flex-flow: column
+  align-items: center
+  border: 1px solid #57002f
+  //width: 65%
+  //border: 1px solid $coolBlue
+  //background-color: #000311
+
+.flexcontainer-column
+  display: -webkit-flex
+  display: flex
+  -webkit-flex-direction: column
+  flex-direction: column
+
+.flexcontainer-row
+  display: -webkit-flex
+  display: flex
+  -webkit-flex-direction: row
+  flex-direction: row
+
+.horCenter
+  display: flex
+  justify-content: center
+
+
+
+.row
+  display: flex
+
+.rowHolder
+  display: flex
+
+.vertCenter
+  display: flex
+  align-items: center
+
+#bottomMatter
+  margin-left: auto
+  margin-right: auto
+  width: 500px
+  display: flex
+  flex-flow: column
+
+#buttons
+  display: flex
+  justify-content: space-between
+  margin: 2vh
+
+
+#buttonControlArea
+  @extend #buttons
+
+#buttonMiscArea
+  @extend #buttons
+
+
+#container
+  @extend .horCenter
+  align-items: center
+  margin: 0
+  padding: 0
+
+#credits
+  width: 90%
+
+#feedback
+  display: flex
+  flex-flow: column
+  align-items: center
+
+#gameOver
+  top: 5%
+  position: relative
+  height: 500px
+  width: 50%
+
+#intro
+  width: 65%
+  height: 65%
+  top: auto
+  bottom: auto
+  background-color: rgba(10,110,10,0.5)
+
+#map
+  width: 100%
+  //z-index: -5
+  //position: absolute
+
+#mainDisplayArea
+  display: flex
+  justify-content: center
+
+#main
+  margin-top: 20px
+
+
+#page
+  display: flex
+  align-items: center
+  flex-flow: column
+  margin-top: 2vh
+  margin-bottom: 2vh
+  width: 100%
+  //margin-right: auto
+  //margin-left: auto
+  overflow: hidden
+  outline: 0 solid black
+
+#sideDisplay
+  display: flex
+  flex-flow: column
+  border: 1px solid #57002f
+  width: 200px
+  padding: 10px
+
+.modal-content
+  background-color: rgba(0,0,0,.7)
+  border: 1px solid #57002f
+
+.modal-container
+  position: relative
+.modal-container .modal, .modal-container .modal-backdrop
+  position: absolute
+.sideDisplayData
+  margin: 5px
+
+
+.modal-map
+  top: auto
+  bottom: auto
+  width: 100%
+  background-color: rgba(0,0,0,.8)
+
+.modal-gameOver
+  width: 50%
+  height: 90%
+  top: auto
+  bottom: auto
+  background-color: rgba(0,0,0,.8)
+
+.modal-intro
+  display: flex
+  top: auto
+  bottom: auto
+  width: 50%
+  height: 90%
+  background-color: rgba(0, 0, 0, 0.9)
+
+.modal-credits
+  top: auto
+  bottom: auto
+  width: 50%
+  height: 90%
+  background-color: rgba(0, 0, 0, 0.9)
