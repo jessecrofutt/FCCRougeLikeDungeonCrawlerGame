@@ -8,7 +8,6 @@ class Row extends React.Component {
         super(props);
     }
 
-
     render() {
 
         let width = this.props.columns;
@@ -41,9 +40,5 @@ function mapStateToProps(state) {
         game: state.game
     };
 }
-//function matchDispatchToProps(dispatch) {
-//    return bindActionCreators({selectUser: selectUser}, dispatch)
-//}
 
 export default connect(mapStateToProps)(Row);
-//export default connect(mapStateToProps, matchDispatchToProps)(Cell);

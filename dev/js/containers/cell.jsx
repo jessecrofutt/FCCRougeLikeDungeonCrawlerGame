@@ -76,9 +76,6 @@ class Cell extends React.Component {
             case 32:
                 bgImage = 'url("./images/health3.png")';
                 break;
-
-
-
         }
 
         let cellDimensions = (45/this.props.columns);
@@ -106,9 +103,5 @@ const mapStateToProps = (state) => {
         showMap: state.showMap
     };
 }
-//function matchDispatchToProps(dispatch) {
-//    return bindActionCreators({selectUser: selectUser}, dispatch)
-//}
 
 export default connect(mapStateToProps)(Cell);
-//export default connect(mapStateToProps, matchDispatchToProps)(Cell);

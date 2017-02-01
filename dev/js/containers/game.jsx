@@ -33,17 +33,17 @@ let weapon = [];
 
 let bossThemeSound1 = new Howl({
     src: ['./sounds/enemyTheme1.mp3'],
-    //loop: true,
+    loop: true,
     volume: 0.3
 });
 let bossThemeSound2= new Howl({
     src: ['./sounds/enemyTheme2.mp3'],
-    //loop: true,
+    loop: true,
     volume: 0.5
 });
 let bossThemeSound3 = new Howl({
     src: ['./sounds/enemyTheme3.mp3'],
-    //loop: true,
+    loop: true,
     volume: 0.4
 });
 let coffeeSound = new Howl({
@@ -115,7 +115,7 @@ class Game extends Component {
 
     componentWillMount() {
         //this.props.showModal("intro", true);
-        this.setupGame(3);
+        this.setupGame(1);
         this.state = {width: 800};
     }
 
@@ -144,7 +144,6 @@ class Game extends Component {
                         <div className="gridArea"
                              ref= "gridArea"
                              tabIndex ={0}
-
                         >
                             <Grid className="grid"
                                   ref= "grid"
@@ -203,7 +202,7 @@ class Game extends Component {
         let playerY = locationArray[1];
         console.log('playerY: ' + playerY);
 
-        //determine position of window beginning on x axis
+            //determine position of window beginning on x axis
         if (playerX < 9) {
             newXBegin = 0;
         } else if (playerX > 36) {
@@ -211,7 +210,7 @@ class Game extends Component {
         } else {
             newXBegin = playerX - 7;
         }
-        //determine position of window beginning on y axis
+            //determine position of window beginning on y axis
         if (playerY < 7) {
             newYBegin = 0;
         } else  if (playerY > 27) {
@@ -262,7 +261,7 @@ class Game extends Component {
         } else {
             this.props.updateGameData(this.props.status.weapon, "weapon");
             this.props.updateGameData(this.props.health, "health");
-            this.props.updateGameData(1000, "health");
+            this.props.updateGameData(100, "health");
         }
     }
 
@@ -633,7 +632,7 @@ class Game extends Component {
             case 12:
                 moveForward = this.fightBoss(location, 3);
                 if(moveForward == true) {
-                    this.props.updateGameData("You have defeated the Boss", "gameStatus");
+                    this.props.updateGameData("You have defeated SportsDad", "gameStatus");
                     this.gameOver();
                     winningThemeSound.play();
 
@@ -738,13 +737,14 @@ class Game extends Component {
         let enemyDamage = (this.props.experience + this.props.status.weaponMulitplier * 5 + 10);
         let randomEnemyDamage = (Math.ceil(enemyDamage * Math.random() * 10/difficulty));
         let newEnemyHealth = Math.round(enemyHealth - enemyDamage - randomEnemyDamage);
+            //prevent negative numbers
         if (newEnemyHealth < 0) newEnemyHealth = 0;
         enemyArray[index][2] = newEnemyHealth;
 
         this.props.updateGameData(newEnemyHealth, enemyHealthData);
         this.props.updateEnemyAction(enemyArray);
 
-        //test for defeat of enemy
+            //test for defeat of enemy
         if (newEnemyHealth < 1) {
 
             explosionSound.play();
@@ -753,7 +753,7 @@ class Game extends Component {
             return true;
 
         } else {
-            //play enemy attck sound
+                //play enemy attck sound
             switch(enemyLevel){
                 case 6:
                     natureSound.play();
@@ -789,9 +789,9 @@ class Game extends Component {
             this.addExperience();
             this.addExperience();
             this.addExperience();
-        }
-        if (gameLevel < 3) {
-            this.nextLevel();
+            if (gameLevel < 3) {
+                this.nextLevel();
+            }
         }
         return victory;
     }

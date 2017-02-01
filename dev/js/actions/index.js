@@ -1,8 +1,4 @@
-//const UPDATE_ARRAY = "UPDATE_ARRAY";
-
 export const updateArrayAction = (nextGameArray) => {
-    //console.log('update array action triggered: ' + 'nextGameArray' + 'is type of: ' + typeof(nextGameArray));
-    //console.log('nextGameArray.width: ' + nextGameArray.length + 'nextGameArray.height: ' + nextGameArray[0].length +' is type of: ' + typeof(nextGameArray));
 
     return {
         type: "UPDATE_ARRAY",
@@ -10,7 +6,6 @@ export const updateArrayAction = (nextGameArray) => {
     }
 }
 export const updateEnemyAction = (nextEnemyArray) => {
-    //console.log('updateEnemyAction action triggered: ' + nextEnemyArray + 'is type of: ' + typeof(nextEnemyArray));
 
     return {
         type: "UPDATE_ENEMIES",
@@ -19,7 +14,7 @@ export const updateEnemyAction = (nextEnemyArray) => {
 }
 
 export const updateGameData = (gameData, dataType) => {
-    //console.log('updateGameData action triggered: ' + gameData + ' is type of: ' + typeof(gameData));
+
     let type = '';
     switch (dataType){
         case 'health':
@@ -95,10 +90,8 @@ export const playerMove = (nextPosition, newGameArray) => {
     }
 }
 export const updatePlayerPosition = (playerLocation) => {
-    //console.log('updatePlayerPosition triggered: ' + initialPosition + 'is type of: ' + typeof(initialPosition));
+
     let nextPosition = playerLocation.slice();
-    //let posX = playerLocation[0];
-    //let posY = playerLocation[1];
 
     return{
         type: "PLAYER_MOVE",
@@ -106,10 +99,8 @@ export const updatePlayerPosition = (playerLocation) => {
     }
 }
 export const updateWindowOrigin = (originLocation) => {
-    //console.log('updatePlayerPosition triggered: ' + initialPosition + 'is type of: ' + typeof(initialPosition));
+
     let nextPosition = originLocation.slice();
-    //let posX = playerLocation[0];
-    //let posY = playerLocation[1];
 
     return{
         type: "WINDOW_ORIGIN",

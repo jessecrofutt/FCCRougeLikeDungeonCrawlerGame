@@ -38,9 +38,5 @@ function mapStateToProps(state) {
         game: state.game
     };
 }
-//function matchDispatchToProps(dispatch) {
-//    return bindActionCreators({selectUser: selectUser}, dispatch)
-//}
 
 export default connect(mapStateToProps)(Grid);
-//export default connect(mapStateToProps, matchDispatchToProps)(Cell);

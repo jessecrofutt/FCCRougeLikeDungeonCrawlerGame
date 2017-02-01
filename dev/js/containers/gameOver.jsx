@@ -69,7 +69,6 @@ function matchDispatchToProps(dispatch) {
     return bindActionCreators({
         showModal: showModal
     }, dispatch)
-
 }
 
 export default connect(mapStateToProps, matchDispatchToProps)(GameOver);

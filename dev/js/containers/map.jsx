@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import Grid from './grid';
 
-
 import {Modal} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
 import {Popover} from 'react-bootstrap';
@@ -13,19 +12,20 @@ import {OverlayTrigger} from 'react-bootstrap';
 
 import {showModal} from '../actions/index';
 
-
 class Map extends React.Component {
 
     constructor(props) {
-        super(props);
 
+        super(props);
     }
 
     close() {
+
         this.props.showModal("showMap", false);
     }
 
     render() {
+
         const popover = (
             <Popover id="modal-popover" title="popover">
                 very popover. such engagement
@@ -64,6 +64,7 @@ class Map extends React.Component {
 }
 
 function mapStateToProps(state) {
+
     return {
         game: state.game,
         gameArray: state.gameArray,
@@ -75,7 +76,6 @@ function matchDispatchToProps(dispatch) {
     return bindActionCreators({
         showModal: showModal
     }, dispatch)
-
 }
 
 export default connect(mapStateToProps, matchDispatchToProps)(Map);

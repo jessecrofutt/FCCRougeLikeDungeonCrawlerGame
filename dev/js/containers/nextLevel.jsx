@@ -7,43 +7,21 @@ import Grid from './grid';
 
 import {Modal} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
-import {Popover} from 'react-bootstrap';
-import {Tooltip} from 'react-bootstrap';
-import {OverlayTrigger} from 'react-bootstrap';
 
 import {showModal} from '../actions/index';
-
-
 
 class NextLevel extends React.Component {
 
     constructor(props) {
         super(props);
-        //this.state = {
-        //    showModal: this.props.showGameOver
-        //};
     }
 
     close() {
-        //this.setState({ showModal: false })
         this.props.showModal("nextLevel", false);
     }
-    //
-    //open() {
-    //    this.setState({ showModal: true })
-    //}
+
 
     render() {
-        const popover = (
-            <Popover id="modal-popover" title="popover">
-                very popover. such engagement
-            </Popover>
-        );
-        const tooltip = (
-            <Tooltip id="modal-tooltip">
-                wow.
-            </Tooltip>
-        );
 
         return (
             <div>
@@ -94,6 +72,4 @@ function matchDispatchToProps(dispatch) {
 
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(NextLevel);/**
- * Created by Hairy on 1/23/2017.
- */
+export default connect(mapStateToProps, matchDispatchToProps)(NextLevel);

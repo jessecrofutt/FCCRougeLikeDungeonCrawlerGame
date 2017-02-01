@@ -68,6 +68,4 @@ function matchDispatchToProps(dispatch) {
 
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(Intro);/**
- * Created by Hairy on 1/23/2017.
- */
+export default connect(mapStateToProps, matchDispatchToProps)(Intro);
