@@ -32,81 +32,81 @@ let health = [];
 let weapon = [];
 
 let bossThemeSound1 = new Howl({
-    src: 'self' ['./sounds/enemyTheme1.mp3'],
+    src: ['./sounds/enemyTheme1.mp3'],
     loop: true,
     volume: 0.3
 });
 let bossThemeSound2= new Howl({
-    src: 'self' ['./sounds/enemyTheme2.mp3'],
+    src: ['./sounds/enemyTheme2.mp3'],
     loop: true,
     volume: 0.5
 });
 let bossThemeSound3 = new Howl({
-    src: 'self' ['./sounds/enemyTheme3.mp3'],
+    src: ['./sounds/enemyTheme3.mp3'],
     loop: true,
     volume: 0.4
 });
 let coffeeSound = new Howl({
-    src: 'self' ['./sounds/coffeeSounds.mp3'],
+    src: ['./sounds/coffeeSounds.mp3'],
     volume: 0.4
 });
 let eatingSound = new Howl({
-    src: 'self' ['./sounds/eatingSound.mp3'],
+    src: ['./sounds/eatingSound.mp3'],
     volume: 0.4
 });
 let explosionSound = new Howl({
-    src: 'self' ['./sounds/explosion.mp3'],
+    src: ['./sounds/explosion.mp3'],
     volume: 1
 });
 let gameOverSound = new Howl({
-    src: 'self' ['./sounds/gameOver.mp3'],
+    src: ['./sounds/gameOver.mp3'],
     volume: 1
 });
 let girlLaughSound = new Howl({
-    src: 'self' ['./sounds/girlLaugh.mp3'],
+    src: ['./sounds/girlLaugh.mp3'],
     volume: 1
 });
 let natureSound = new Howl({
-    src: 'self' ['./sounds/natureSound.mp3'],
+    src: ['./sounds/natureSound.mp3'],
     volume: 0.2
 });
 let punchingSound = new Howl({
-    src: 'self' ['./sounds/punch1.mp3'],
+    src: ['./sounds/punch1.mp3'],
     volume: 0.8
 });
 let sunshineSound = new Howl({
-    src: 'self' ['./sounds/sunshineSound.mp3'],
+    src: ['./sounds/sunshineSound.mp3'],
     volume: 0.2
 });
 let potionSound = new Howl({
-    src: 'self' ['./sounds/potionSound.mp3'],
+    src: ['./sounds/potionSound.mp3'],
     volume: 0.2
 });
 let searchingSound1 = new Howl({
-    src: 'self' ['./sounds/searchingSound1.mp3'],
+    src: ['./sounds/searchingSound1.mp3'],
     loop: true,
     volume: 0.4
 });
 let searchingSound2 = new Howl({
-    src: 'self' ['./sounds/searchingSound2.mp3'],
+    src: ['./sounds/searchingSound2.mp3'],
     loop: true,
     volume: 0.4
 });
 let searchingSound3 = new Howl({
-    src: 'self' ['./sounds/searchingSound3.mp3'],
+    src: ['./sounds/searchingSound3.mp3'],
     loop: true,
     volume: 0.4
 });
 let screamSound = new Howl({
-    src: 'self' ['./sounds/scream.mp3'],
+    src: ['./sounds/scream.mp3'],
     volume: 0.7
 });
 let weaponPickupSound = new Howl({
-    src: 'self' ['./sounds/weaponPickup.mp3'],
+    src: ['./sounds/weaponPickup.mp3'],
     volume: 0.2
 });
 let winningThemeSound = new Howl({
-    src: 'self' ['./sounds/winningTheme.mp3'],
+    src: ['./sounds/winningTheme.mp3'],
     volume: 0.4,
     loop: true
 });
