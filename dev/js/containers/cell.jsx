@@ -25,56 +25,56 @@ class Cell extends React.Component {
 
         switch(cellImageNum){
             case 0:
-                bgImage = 'url("./images/wall.png")';
+                bgImage = 'url("./src/images/wall.png")';
                 break;
             case 1:
-                bgImage = 'url("./images/empty.png")';
+                bgImage = 'url("./src/images/empty.png")';
                 break;
             case 2:
                 break;
             case 3:
-                bgImage = 'url("./images/player.png")';
+                bgImage = 'url("./src/images/player.png")';
                 break;
             case 4:
-                bgImage = 'url("./images/enemy1.png")';
+                bgImage = 'url("./src/images/enemy1.png")';
                 break;
             case 5:
                 break;
             case 6:
-                bgImage = 'url("./images/nature.png")';
+                bgImage = 'url("./src/images/nature.png")';
                 break;
             case 7:
-                bgImage = 'url("./images/sun.png")';
+                bgImage = 'url("./src/images/sun.png")';
                 break;
             case 8:
-                bgImage = 'url("./images/girl.png")';
+                bgImage = 'url("./src/images/girl.png")';
                 break;
             case 10:
-                bgImage = 'url("./images/gymTeacher.png")';
+                bgImage = 'url("./src/images/gymTeacher.png")';
                 break;
             case 11:
-                bgImage = 'url("./images/meathead.png")';
+                bgImage = 'url("./src/images/meathead.png")';
                 break;
             case 12:
-                bgImage = 'url("./images/sportsDad.png")';
+                bgImage = 'url("./src/images/sportsDad.png")';
                 break;
             case 20:
-                bgImage = 'url("./images/glasses.png")';
+                bgImage = 'url("./src/images/glasses.png")';
                 break;
             case 21:
-                bgImage = 'url("./images/pencil.png")';
+                bgImage = 'url("./src/images/pencil.png")';
                 break;
             case 22:
-                bgImage = 'url("./images/calculator.png")';
+                bgImage = 'url("./src/images/calculator.png")';
                 break;
             case 30:
-                bgImage = 'url("./images/health1.png")';
+                bgImage = 'url("./src/images/health1.png")';
                 break;
             case 31:
-                bgImage = 'url("./images/health2.png")';
+                bgImage = 'url("./src/images/health2.png")';
                 break;
             case 32:
-                bgImage = 'url("./images/health3.png")';
+                bgImage = 'url("./src/images/health3.png")';
                 break;
         }
 
